@@ -43,18 +43,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .table {
   padding-left: 50px;
-  padding-right: 50px; }
+  padding-right: 50px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 8px;}
 
 .board {
   display: grid;
-  grid-template-columns: 125px repeat(9, 80px) 125px;
-  grid-template-rows: 125px repeat(9, 80px) 125px;
+  grid-template-columns: 120px repeat(9, 65px) 120px;
+  grid-template-rows: 120px repeat(9, 65px) 120px;
   grid-gap: 2px;
-  margin: 50px auto;
-  width: 994px;
-  height: 994px;
+  width: 850px;
+  height: 850px;
   background: #26272b;
   border: 2px solid #26272b; }
+
+.userBoard{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  width: 200px;
+  height: auto;
+  margin: 25px; }
+
+.user{
+  background-color: white;
+  width: 200px;
+  height: 80px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  user-select: none; }
+
+.user > img{
+  width: 64px;
+  height: 64px; }
 
 .center {
   grid-column: 2 / 11;
@@ -71,12 +96,12 @@ h1, h2, h3, h4, h5, h6 {
   grid-gap: 2px; }
 
 .horizontal-row {
-  grid-template-rows: 125px;
-  grid-template-columns: repeat(9, 80px); }
+  grid-template-rows: 120px;
+  grid-template-columns: repeat(9, 65px); }
 
 .vertical-row {
-  grid-template-columns: 125px;
-  grid-template-rows: repeat(9, 80px); }
+  grid-template-columns: 120px;
+  grid-template-rows: repeat(9, 65px); }
   .vertical-row .container {
     top: 50%;
     left: 50%; }
@@ -127,22 +152,23 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: flex-end;
     position: relative;
     transform-origin: center;
-    height: 125px;
-    width: 80px; 
-  }
-  .space .container > img {
-    pointer-events: none; }
-  .space .name,
-  .space .instructions {
-    padding-left: 15px;
-    padding-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .space .price {
-    font-size: 13px;
-    font-weight: 600;
+    height: 120px;
+    width: 65px;
+    cursor: pointer;
+    pointer-events: none;
     user-select: none; }
+
+.space .name,
+.space .instructions {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.space .price {
+  font-size: 13px;
+  font-weight: 600; }
 
 .corner .container {
   justify-content: space-around;
@@ -154,6 +180,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .property .color-bar {
   height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.user-bar {
+  height: 80px;
+  width: 10px;
   display: flex;
   align-items: center;
   justify-content: center; }
